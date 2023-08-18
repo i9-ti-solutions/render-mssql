@@ -7,7 +7,7 @@ services:
     #   url: mcr.microsoft.com/mssql/server:2017-latest
 
     env: docker
-    repo: https://github.com/jonahgeorge/render-examples-mssql.git
+    repo: https://github.com/i9-ti-solutions/render-mssql.git
     branch: main
     
     plan: standard
