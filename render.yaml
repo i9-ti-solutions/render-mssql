@@ -2,13 +2,13 @@ services:
   - type: pserv
     name: mssql
     
-    # env: image
-    # image:
-    #   url: mcr.microsoft.com/mssql/server:2017-latest
+    env: image
+    image:
+     url: mcr.microsoft.com/azure-sql-edge:latest
 
-    env: docker
-    repo: https://github.com/i9-ti-solutions/render-mssql.git
-    branch: main
+    #env: docker
+    #repo: https://github.com/i9-ti-solutions/render-mssql.git
+    #branch: main
     
     plan: standard
     autoDeploy: false
@@ -17,6 +17,8 @@ services:
         value: "Y"
       - key: MSSQL_SA_PASSWORD
         value: "YourStrong@Passw0rd"
+      - key: PORT
+        value: 1433
     disk:
       name: data
       mountPath: /var/opt/mssql
